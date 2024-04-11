@@ -1,5 +1,3 @@
-import React from 'react'
-
 import CustomButton from './CustomButton'
 
 const FilePicker = ({ file, setFile, readFile }) => {
@@ -18,12 +16,12 @@ const FilePicker = ({ file, setFile, readFile }) => {
           Upload File
         </label>
         {/* ไฟล์ที่เลือก */}
-        <p className="mt-2 text-gray-500 text-xs truncate">
+        <p className="mt-2 text-gray-500 text-xs ">
           {file === '' ? "No file selected" : file.name}
         </p>
       </div>
       {/* หุ้ม button logo , full */}
-      <div className="mt-4 flex flex-wrap gap-3">
+      <div className="mt-4 flex gap-3">
         {/* ปุ่ม logo */}
         <CustomButton 
           type="outline"

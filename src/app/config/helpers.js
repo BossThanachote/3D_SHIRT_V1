@@ -1,13 +1,10 @@
-import { Html } from "next/document";
-
-
 // อ่านไฟล์
 export const reader = (file) =>
   new Promise((resolve) => {
     const fileReader = new FileReader();
     fileReader.onload = () => resolve(fileReader.result);
     fileReader.readAsDataURL(file);
-  });
+  });                                                                 
 
 export const getContrastingColor = (color) => {
   // Remove the '#' character if it exists

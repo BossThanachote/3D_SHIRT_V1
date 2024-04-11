@@ -23,6 +23,39 @@ const Customizer = () => {
     stylishShirt: false,
   })
 
+  // ฟังก์ชั่นกำหนดลายเสื้อ
+  const handleDecals = (type, result) => {
+    const decalType = DecalTypes[type];
+
+    state[decalType.stateProperty] = result;
+
+    if(!activeFilterTab[decalType.filterTab]) {
+      handleActiveFilterTab(decalType.filterTab)
+    }
+  }
+
+  // จัดการสถานะ TabFilter
+  const handleActiveFilterTab = (tabName) => {
+    switch (tabName) {
+      case "logoShirt":
+          state.isLogoTexture = !activeFilterTab[tabName];
+        break;
+      case "stylishShirt":
+          state.isFullTexture = !activeFilterTab[tabName];
+        break;
+    }
+
+
+// ฟังก์ชั่น Toggle
+    setActiveFilterTab((prevState) => {
+      return {
+        ...prevState,
+        [tabName]: !prevState[tabName]
+      }
+    })
+  }
+
+  
 //ฟัวก์ชั่นอ่านไฟล์และปรับแต่งลายเสื้อ
   const readFile = (type) => {
     reader(file)
@@ -46,36 +79,6 @@ const Customizer = () => {
       default:
         return null;
     }
-  }
-// ฟังก์ชั่นกำหนดลายเสื้อ
-  const handleDecals = (type, result) => {
-    const decalType = DecalTypes[type];
-
-    state[decalType.stateProperty] = result;
-
-    if(!activeFilterTab[decalType.filterTab]) {
-      handleActiveFilterTab(decalType.filterTab)
-    }
-  }
-// จัดการสถานะ TabFilter
-  const handleActiveFilterTab = (tabName) => {
-    switch (tabName) {
-      case "logoShirt":
-          state.isLogoTexture = !activeFilterTab[tabName];
-        break;
-      case "stylishShirt":
-          state.isFullTexture = !activeFilterTab[tabName];
-        break;
-    }
-
-
-// ฟังก์ชั่น Toggle
-    setActiveFilterTab((prevState) => {
-      return {
-        ...prevState,
-        [tabName]: !prevState[tabName]
-      }
-    })
   }
 
 

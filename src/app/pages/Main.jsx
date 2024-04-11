@@ -1,5 +1,4 @@
 'use client';
-import React from 'react';
 import { motion , AnimatePresence } from 'framer-motion';
 import { useSnapshot } from 'valtio';
 
@@ -23,9 +22,9 @@ const Main = () => {
             <img 
               src='./threejs.png'
               alt='logo'
-              className='w-8 h-8 object-contain' />
+              className='w-8 h-8 ' />
           </motion.header>
-
+        
           <motion.div className='home-content' {...headContainerAnimation}>
             <motion.div {...headTextAnimation}>
               <h1 className='head-text'>

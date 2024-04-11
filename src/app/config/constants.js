@@ -23,6 +23,7 @@ export const FilterTabs = [
   },
 ];
 
+// state รูป
 export const DecalTypes = {
   logo: {
     stateProperty: "logoDecal",
