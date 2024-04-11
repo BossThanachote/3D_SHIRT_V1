@@ -4,7 +4,7 @@ export const slideAnimation = (direction) => {
   return {
     initial: {
       x: direction === "left" ? -100 : direction === "right" ? 100 : 0,
-      y: direction === "up" ? 100 : direction === "down" ? -100 : 0,
+      y: direction === "up" ? -100 : direction === "down" ? 100 : 0,
       opacity: 0,
       transition: { ...transition, delay: 0.5 },
     },
@@ -16,7 +16,7 @@ export const slideAnimation = (direction) => {
     },
     exit: {
       x: direction === "left" ? -100 : direction === "right" ? 100 : 0,
-      y: direction === "up" ? 100 : direction === "down" ? -100 : 0,
+      y: direction === "down" ? 100 : direction === "up" ? -100 : 0,
       transition: { ...transition, delay: 0 },
     },
   };
@@ -44,7 +44,6 @@ export const headTextAnimation = {
     type: "spring",
     damping: 5,
     stiffness: 40,
-    restDelta: 0.001,
     duration: 0.3,
   },
 };
@@ -54,12 +53,10 @@ export const headContentAnimation = {
   animate: { y: 0, opacity: 1 },
   transition: {
     type: "spring",
-    damping: 7,
+    damping: 6,
     stiffness: 30,
-    restDelta: 0.001,
     duration: 0.6,
     delay: 0.2,
-    delayChildren: 0.2,
   },
 };
 

@@ -13,23 +13,25 @@ const CameraRig = ({ children }) => {
     const isBreakpoint = window.innerWidth <= 1260;
     const isMobile = window.innerWidth <= 600;
 
-    // set the initial position of the model
-    let targetPosition = [-0.4, 0, 2];
+    // กำหนดตำแหน่งตัวเสื้อ ตำแหน่งเริ่มต้น (หน้าจอปกติ)
+    let targetPosition = [-0.4, 0, 2]; 
+    // กำหนดตำแหน่งตัวเสื้อในหน้า Main
     if(snap.intro) {
       if(isBreakpoint) targetPosition = [0, 0, 2];
       if(isMobile) targetPosition = [0, 0.2, 2.5];
+    // กำหนดตำแหน่งตัวเสื้อในหน้า Customize
     } else {
       if(isMobile) targetPosition = [0, 0, 2.5]
       else targetPosition = [0, 0, 2];
     }
 
-    // set model camera position
+    // ตำแหน่งณปัจจุบัน -> ตำแหน่งที่เปลี่ยนไป
     easing.damp3(state.camera.position, targetPosition, 0.25, delta)
 
     // set the model rotation smoothly
     easing.dampE(
       group.current.rotation,
-      [state.pointer.y / 10, -state.pointer.x / 5, 0],
+      [state.pointer.y / 10, -state.pointer.x / 5,0],
       0.25,
       delta
     )

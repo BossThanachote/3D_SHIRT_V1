@@ -6,28 +6,32 @@ const FilePicker = ({ file, setFile, readFile }) => {
   return (
     <div className="filepicker-container">
       <div className="flex-1 flex flex-col">
+        {/* upload file */}
         <input 
           id="file-upload"
           type="file"
           accept="image/*"
           onChange={(e) => setFile(e.target.files[0])}
         />
+        {/* ปุ่ม upload file */}
         <label htmlFor="file-upload" className="filepicker-label">
           Upload File
         </label>
-
+        {/* ไฟล์ที่เลือก */}
         <p className="mt-2 text-gray-500 text-xs truncate">
           {file === '' ? "No file selected" : file.name}
         </p>
       </div>
-
+      {/* หุ้ม button logo , full */}
       <div className="mt-4 flex flex-wrap gap-3">
+        {/* ปุ่ม logo */}
         <CustomButton 
           type="outline"
           title="Logo"
           handleClick={() => readFile('logo')}
           customStyles="text-xs"
         />
+        {/* ปุ่ม full */}
         <CustomButton 
           type="filled"
           title="Full"

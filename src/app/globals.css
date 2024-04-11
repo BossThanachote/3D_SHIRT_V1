@@ -1,19 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,600;1,900&display=swap");
-@import url("https://rsms.me/inter/inter.css");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-html {
-  font-family: "Inter", sans-serif;
-}
-
-@supports (font-variation-settings: normal) {
-  html {
-    font-family: "Inter var", sans-serif;
-  }
-}
 
 .app {
   @apply relative w-full h-screen overflow-hidden;
@@ -40,7 +28,7 @@ html {
 }
 
 .filtertabs-container {
-  @apply absolute z-10 bottom-5 right-0 left-0 w-full flex justify-center items-center flex-wrap gap-4;
+  @apply absolute z-10 bottom-5 right-0 left-0 w-full flex justify-center items-center gap-3;
 }
 
 .aipicker-container {

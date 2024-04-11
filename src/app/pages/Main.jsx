@@ -18,16 +18,15 @@ const Main = () => {
   return (
     <AnimatePresence>
       {snap.intro && (
-        <motion.section className='home' {...slideAnimation("left")}>
-          <motion.header {...slideAnimation("down")}>
+        <motion.section className='home'>
+          <motion.header {...slideAnimation("up")}>
             <img 
               src='./threejs.png'
               alt='logo'
               className='w-8 h-8 object-contain' />
           </motion.header>
 
-          <motion.div className='home-content' {...
-          headContainerAnimation}>
+          <motion.div className='home-content' {...headContainerAnimation}>
             <motion.div {...headTextAnimation}>
               <h1 className='head-text'>
                 เริ่ม<br className='xl:block hidden' />กันเลย 
@@ -35,8 +34,8 @@ const Main = () => {
             </motion.div>
             <motion.div {...headContentAnimation} className='flex flex-col gap-5'>
               <p className='max-w-md font-normal text-gray-600 text-base'>
-              สร้างเสื้อเสื้อผ้าที่ไม่เหมือนใครของคุณ
-              ด้วยเครื่องมือการปรับแต่งสามมิติล่าสุดของเรา! <strong>ปลดปล่อยจินตนาการ</strong>{""} และกำหนดสไตล์ของคุณเอง!
+              สร้างเสื้อผ้าที่ไม่เหมือนใครของคุณ
+              ด้วยเครื่องมือการปรับแต่งสามมิติล่าสุดของเรา! <strong>ปลดปล่อยจินตนาการ</strong> และกำหนดสไตล์ของคุณเอง!
               </p>
 
               <CustomButton 
