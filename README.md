@@ -26,7 +26,7 @@
 
 **Library**
 <br />
-[![My Skills](https://skillicons.dev/icons?i=threejs,valtio)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=react,threejs)](https://skillicons.dev)
 <hr>
 
-*link to website* : https://effortless-chaja-487aeb.netlify.app/
+*link to website* : https://3-d-shirt-v1.vercel.app/
