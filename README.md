@@ -15,13 +15,18 @@
 
 **พัฒนาโดยใช้ภาษา**
 <br />
-[![My Skills](https://skillicons.dev/icons?i=html,css)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=html,css,js)](https://skillicons.dev)
 <br />
 <br />
 
-**Framework CSS**
+**Framework**
 <br />
-[![My Skills](https://skillicons.dev/icons?i=bootstrap)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=nextjs,tailwind)](https://skillicons.dev)
+<hr>
+
+**Library**
+<br />
+[![My Skills](https://skillicons.dev/icons?i=threejs,valtio)](https://skillicons.dev)
 <hr>
 
 *link to website* : https://effortless-chaja-487aeb.netlify.app/
