@@ -22,7 +22,8 @@
 **Framework**
 <br />
 [![My Skills](https://skillicons.dev/icons?i=nextjs,tailwind)](https://skillicons.dev)
-<hr>
+<br />
+<br />
 
 **Library**
 <br />
